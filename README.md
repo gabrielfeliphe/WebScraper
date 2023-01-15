@@ -1,4 +1,4 @@
-<h1 align="center"> Endpoints </h1>
+<h1 align="center"> Endpoints - todos método GET </h1>
 
  # /
 Este endpoint retorna um array JSON de todos os itens. Os dados são obtidos chamando a função data.main() e são retornados como estão.
