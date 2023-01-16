@@ -3,6 +3,11 @@ const app = express()
 
 const data  = require('./data.js');
 
+app.use(function(req, res, next) {
+    var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    console.log(ip);
+    next();
+});
 
 app.get('/', async function (req, res) {
     const items = await data.main();
